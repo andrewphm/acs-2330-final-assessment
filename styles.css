@@ -1,0 +1,108 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  border: 1px solid black;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-right: none;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+figure {
+  border: 1px solid black;
+  height: 400px;
+  width: 400px;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+}
+
+/* When the screen is 800px or smaller the the site should arrange itself vertically with the image at the top and the form below. */
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+
+  figure {
+    order: 0;
+  }
+
+  form {
+    order: 1;
+    border-right: 1px solid black;
+  }
+
+  label {
+    flex-direction: row;
+    width: 100%;
+    text-align: right;
+  }
+
+  label span {
+    width: 25%;
+  }
+
+  label input {
+    width: 75%;
+  }
+}
+
+@media (max-width: 420px) {
+  figure {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  label {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  label span {
+    text-align: center;
+    width: 100%;
+  }
+
+  label input {
+    margin: 0 auto;
+  }
+}

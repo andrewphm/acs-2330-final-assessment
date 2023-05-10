@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final Assessment</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
   <body>
-    <div class="container">
-      <div>
+    <main>
+      <section class="container">
         <form>
           <label>
             <span>Hue Rotate</span>
@@ -31,9 +32,11 @@
             <input id="saturation" type="range" min="0" max="200" value="100" />
           </label>
         </form>
-        <img src="./dali.png" width="400" height="400" />
-      </div>
-    </div>
+        <figure>
+          <img src="./dali.png" alt="Four portrait paintings of Salvador Dali" />
+        </figure>
+      </section>
+    </main>
 
     <script>
       const img = document.querySelector('img');
